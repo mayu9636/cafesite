@@ -1,0 +1,49 @@
+@use "../global/mixins" as *;
+@use "../global/variables" as *;
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $mainColor;
+    font-size: $fzText;
+}
+
+////////////////////////////////// セクション
+section {
+    margin-top: 10rem;
+}
+
+.section-wrapper{
+    padding-inline: 1rem;
+    max-width: 1200px;
+}
+
+////////////////////////////////// 見出し
+h2 {
+    font-family: $ff2;
+    font-size: $fzH2;
+    font-weight: 600;
+    text-align: center;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 0.605rem + 1.86vw, 2rem);
+    font-weight: 600;
+    text-align: center;
+}
+
+////////////////////////////////// ボタン
+.btn {
+    @include buttonSimple02(0.75rem 2.5rem, $textColor, $accentColor);
+    text-align: center;
+}
+
+
+

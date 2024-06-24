@@ -1,0 +1,155 @@
+@use "../global/mixins" as *;
+@use "../global/variables" as *;
+
+//////////////////////////////////////////////// スマホ
+@include mediaMax(sp) {
+    main {
+        /////////////////////////////// クーポン
+        .coupon {
+            .banner {
+                flex-direction: column;
+            }
+        }
+
+        ///////////////////////////////////////////////////// コンセプト
+        #concept {
+            .concept-wrapper {
+                .concept-boxes {
+                    max-width: 400px;
+                    margin-inline: auto;
+                    gap: 5rem;
+
+                    .concept-box {
+                        flex-direction: column;
+
+                        .concept-image {
+                            max-width: 280px;
+                        }
+
+                        .concept-message {
+                            flex-basis: 130px;
+
+                            h3 {
+                                margin-top: 1.5rem;
+                            }
+                        }
+                    }
+
+                    .concept-box:nth-child(2) {
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+
+        // 白いクラゲの背景
+        #concept::before {
+            background-image: url(../images/concept_bg_SP.svg);
+            background-size: 300vw 100%;
+            background-position: center top;
+        }
+
+        ///////////////////////////////////////////////////// スタッフ
+        #staff {
+            .staff-wrapper {
+                padding-inline: 1rem;
+
+                .swiper {
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            margin-right: 0;
+
+                            .slide-img {
+                                max-width: 100%;
+                            }
+
+                            // クラゲの種類
+                            .label {
+                                width: clamp(
+                                    7.5rem,
+                                    6.161rem + 6.7vw,
+                                    9.375rem
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // 白いクラゲの背景
+        #staff::before {
+            background-image: url(../images/staff_bg_SP.svg);
+            background-size: 220vw 100%;
+            background-position: center top;
+        }
+
+        ///////////////////////////////////////////////////// メニュー
+        #menu {
+            .menu-wrapper {
+                .menu-boxes {
+                    .menu-box1 {
+                        flex-direction: column;
+                    }
+
+                    .menu-box2 {
+                        flex-direction: column;
+                        gap: 5rem;
+                    }
+                }
+            }
+        }
+
+        // 白いクラゲの背景
+        #menu::before {
+            background-image: url(../images/menu_bg_SP.svg);
+            background-size: 460vw 100%;
+            background-position: center top;
+        }
+
+        ///////////////////////////////////////////////////// ニュース
+
+        // 白いクラゲの背景
+        #news::before {
+            background-size: 380vw 100%;
+            background-position: center top;
+        }
+
+        ///////////////////////////////////////////////////////// アクセス
+        #access {
+            .access-wrapper {
+                address {
+                    flex-direction: column;
+                    margin-top: 3.75rem;
+
+                    .googlemap {
+                        width: 100%;
+                    }
+
+                    .address-box {
+                        > p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /////////////////////////////////////////////////////// フッター
+
+    footer {
+        .footer-container {
+            gap: 3rem;
+
+            // ナビメニュー
+            ul {
+                @include flexColumnCenter(1rem);
+            }
+        }
+
+        .footer-copy {
+            margin-top: 5rem;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+@use '../global/mixins' as * ;
+@use '../global/variables' as * ;
+
+footer{
+
+    .footer-container{
+        @include flexColumnCenter(5rem);
+
+        .footer-logo{
+            width: 150px;
+        }
+
+        ul{
+            @include flexCenter(1.5rem);
+
+            li{
+
+                a{
+                    font-family: $ff2;
+                        font-weight: 600;
+                        display: block;
+                        opacity: 1;
+                        transition: all .4s ease-in-out;
+                }
+            }
+        }
+
+        ul:has(a:hover) a:not(:hover) {
+            opacity: 0.3;
+        }
+    }
+
+    .footer-copy{
+        background-image: url(../images/wave_top.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        text-align: center;
+        padding-block: 2rem;
+        margin-top: 8rem;
+    }
+}

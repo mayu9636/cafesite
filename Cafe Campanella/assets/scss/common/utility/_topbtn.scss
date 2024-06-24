@@ -1,0 +1,22 @@
+@use '../../global/variables' as * ;
+
+  #topButton{
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    position: fixed;
+    bottom:20px;
+    right: 20px;
+    opacity: 0;/* サイトが読み込まれた瞬間、一瞬画面にボタンが出てきてしまう現象を防ぐため */
+    z-index: 5;
+    transition: all 0.3s linear;
+
+    a{
+      display: block;
+      padding: 30px 0;
+      text-align: center;
+      background-color: $accentColor;
+      border-radius: 50%;
+  }
+}
+

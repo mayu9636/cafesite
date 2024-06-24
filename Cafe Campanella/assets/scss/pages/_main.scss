@@ -1,0 +1,386 @@
+@use "../global/mixins" as *;
+@use "../global/variables" as *;
+
+main {
+    ///////////////////////////////////////////////////// ファーストビュー
+
+    .fv {
+        margin-top: 2.5rem;
+        margin-inline: auto;
+
+        img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+    }
+
+    /////////////////////////////// クーポン
+    .coupon {
+        margin-top: 5rem;
+        margin-inline: auto;
+        padding-inline: 1rem;
+
+        p {
+            font-family: $ff2;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-inline: auto;
+            text-align: center;
+        }
+
+        p::before {
+            content: "\\\\ ";
+        }
+
+        p::after {
+            content: " //";
+        }
+
+        .banner {
+            @include flexCenter(3rem);
+            margin-top: 3.5rem;
+
+            div {
+                max-width: 300px;
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////// コンセプト
+    #concept {
+        position: relative;
+
+        .concept-wrapper {
+            margin-right: auto;
+
+            .catchcopy {
+                font-size: clamp(1.5rem, 0.384rem + 3.49vw, 3rem);
+                text-align: center;
+                margin-top: 7rem;
+            }
+
+            .concept-boxes {
+                margin-top: 6rem;
+                @include flexColumnCenter(3rem);
+
+                .concept-box {
+                    display: flex;
+                    align-items: center;
+                    gap: clamp(1rem, -4.209rem + 16.28vw, 8rem);
+
+                    .concept-image {
+                        flex-basis: clamp(
+                            17.5rem,
+                            14.728rem + 5.78vw,
+                            21.875rem
+                        );
+                    }
+
+                    .concept-message {
+                        flex-basis: 425px;
+                        @include flexColumn(1.5rem);
+                    }
+                }
+
+                .concept-box:nth-child(2) {
+                    flex-direction: row-reverse;
+                }
+            }
+        }
+    }
+
+    // 白いクラゲの背景
+    #concept::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/concept_bg.svg);
+        background-size: 150vw 100%;
+        background-position: -35vw top;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    ///////////////////////////////////////////////////// スタッフ
+    #staff {
+        position: relative;
+
+        .staff-wrapper {
+            max-width: 1420px;
+            margin-left: auto;
+            padding-block: clamp(3rem, -2rem + 25vw, 10rem);
+
+            // Swiper
+            .swiper {
+                margin-top: 6rem;
+                width: 100%;
+
+                .swiper-wrapper {
+                    .swiper-slide {
+                        margin-right: 1rem;
+                        text-align: center;
+                        position: relative;
+
+                        .slide-img {
+                            max-width: 400px;
+                        }
+
+                        // クラゲの種類
+                        .label {
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+                            width: clamp(
+                                5.625rem,
+                                1.439rem + 13.08vw,
+                                11.25rem
+                            );
+                            aspect-ratio: 1/1;
+                            border-radius: 50%;
+                            background-color: $mainColor;
+                            @include flexCenter(0);
+
+                            p {
+                                font-size: clamp(
+                                    1rem,
+                                    0.628rem + 1.16vw,
+                                    1.5rem
+                                );
+                                font-weight: 600;
+                            }
+
+                            .label-small {
+                                font-size: clamp(
+                                    0.8rem,
+                                    0.502rem + 0.93vw,
+                                    1.2rem
+                                );
+                            }
+                        }
+                    }
+                }
+            }
+
+            // ページネーション
+            .swiper-pagination {
+                .swiper-pagination-bullet-active {
+                    background-color: $accentColor;
+                }
+            }
+        }
+    }
+
+    // 白いクラゲの背景
+    #staff::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/staff_bg.svg);
+        background-size: 120vw 100%;
+        background-position: 15px top;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    ///////////////////////////////////////////////////// メニュー
+
+    #menu {
+        position: relative;
+
+        .menu-wrapper {
+            padding-block: 5rem;
+            margin-right: auto;
+
+            .menu-boxes {
+                margin-top: 5rem;
+                @include flexColumnCenter(clamp(5rem, 3.099rem + 3.96vw, 8rem));
+
+                .menu-box1 {
+                    @include flexCenter(
+                        clamp(2.25rem, -0.727rem + 9.3vw, 6.25rem)
+                    );
+
+                    .menu-main-img {
+                        max-width: 300px;
+                    }
+
+                    .menu-text {
+                        @include flexColumnCenter(
+                            clamp(1rem, 0.256rem + 2.33vw, 2rem)
+                        );
+
+                        p {
+                            font-size: clamp(1.2rem, 0.605rem + 1.86vw, 2rem);
+                        }
+                    }
+                }
+
+                .menu-box2 {
+                    @include flexCenter(clamp(2rem, -0.5rem + 4.44vw, 5rem));
+
+                    .menu-sub-box {
+                        @include flexColumnCenter(
+                            clamp(1rem, 0.256rem + 2.33vw, 2rem)
+                        );
+
+                        .menu-sub-img {
+                            max-width: 250px;
+                        }
+
+                        p {
+                            font-size: clamp(1.2rem, 0.605rem + 1.86vw, 2rem);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 白いクラゲの背景
+    #menu::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/menu_bg.svg);
+        background-size: 150vw 100%;
+        background-position: -35vw top;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    ///////////////////////////////////////////////////// ニュース
+    #news {
+        position: relative;
+
+        .news-wrapper {
+            margin-left: auto;
+            padding-block: 5rem;
+
+            .sns-container {
+                margin-top: 6rem;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 1rem;
+
+                .tiktok-box {
+                    width: 359px;
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+
+
+                    .tiktok-embed {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // 白いクラゲの背景
+    #news::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/news_bg.svg);
+        background-size: 200vw 100%;
+        background-position: -35vw top;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    // 縦並びの指定
+    @media (width <= 768px) {
+        #news {
+            .news-wrapper {
+                .sns-container {
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    ///////////////////////////////////////////////////////// アクセス
+    #access {
+        position: relative;
+        background-color: $subColor;
+        padding-block: 6rem;
+        margin-top: calc(12rem + 100px);
+        margin-bottom: calc(8rem + 100px);
+
+        .access-wrapper {
+            margin-inline: auto;
+
+            address {
+                margin-top: 6rem;
+                margin-inline: auto;
+                @include flexCenter(3rem);
+
+                .googlemap {
+                    flex-basis: 420px;
+                    height: 400px;
+
+                    iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                .address-box {
+                    width: fit-content;
+                    @include flexColumn();
+
+                    > p {
+                        font-size: 1.5rem;
+                    }
+
+                    .address-content-box {
+                        display: flex;
+                        gap: 1rem;
+
+                        .title {
+                            flex-basis: 4rem;
+                            flex-shrink: 0;
+                            text-align: center;
+                            font-weight: 600;
+                        }
+
+                        .content {
+                            flex-grow: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // 上下の白い波線のあしらい
+    #access::before,
+    #access::after {
+        content: "";
+        width: 100%;
+        height: 140px;
+        background-repeat: repeat-x;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+    }
+
+    #access::before {
+        background-image: url(../images/wave_top.png);
+        background-position: center top;
+        top: -100px;
+    }
+
+    #access::after {
+        background-image: url(../images/wave_bottom.png);
+        background-position: center bottom;
+        bottom: -100px;
+    }
+} //main
