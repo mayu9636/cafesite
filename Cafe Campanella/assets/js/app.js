@@ -18,7 +18,8 @@ topbutton('topButton');
 // ============= スクロール検知(getBoundingClientRect) ============= //
 // 第一引数：監視する要素、第二引数：付与するクラス名
 import { scrollObservation } from "./modules/scrollObservation.js";
-scrollObservation('.animate__animated' , 'animate__fadeIn');
+scrollObservation('section' , 'fadeInUp-visible');
+scrollObservation('.catchcopy' , 'fadeIn-visible');
 
 
 // ============= ドロワー(ハンバーガーメニュー) ============= //

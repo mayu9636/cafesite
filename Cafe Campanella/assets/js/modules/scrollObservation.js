@@ -9,9 +9,12 @@ export function scrollObservation(a, b) {
             // 画面内に入っているかどうかを判定
             if (targetRect.top < window.innerHeight && targetRect.bottom >= 0) {
                 target.classList.add(b);
-            } else {
-                target.classList.remove(b);
-            }
+            } 
+
+            // 1回だけアニメーションしたいのでコメントアウト。
+            // else {
+            //     target.classList.remove(b);
+            // }
         });
     }
 

@@ -173,6 +173,44 @@ h3 {
   opacity: 0.6;
 }
 
+.fadeInUp {
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.fadeInUp-visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+.fadeIn-visible {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.opacity {
+  opacity: 0;
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+.opacity-visible {
+  opacity: 1;
+}
+
 header .header-wrapper {
   margin-inline: auto;
   max-width: 1500px;
