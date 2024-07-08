@@ -1,6 +1,10 @@
 @use '../global/mixins' as * ;
 @use '../global/variables' as * ;
 
+/* =================================================== */
+/* footer */
+/* =================================================== */
+
 footer{
 
     .footer-container{
@@ -12,7 +16,6 @@ footer{
 
         ul{
             @include flexCenter(1.5rem);
-
             li{
 
                 a{
@@ -23,12 +26,23 @@ footer{
                         transition: all .4s ease-in-out;
                 }
             }
+
+            .nav-menu-list{
+                display: flex;
+                gap: 1.5rem;
+
+        }
+
+            .sns-link{
+                display: flex;
+                gap: 1.5rem;
+            }
         }
 
         ul:has(a:hover) a:not(:hover) {
             opacity: 0.3;
         }
-    }
+    }//.footer-container
 
     .footer-copy{
         background-image: url(../images/wave_top.png);
@@ -39,4 +53,4 @@ footer{
         padding-block: 2rem;
         margin-top: 8rem;
     }
-}
+}//footer

@@ -114,6 +114,9 @@ body {
   border-radius: 50%;
 }
 
+/* =================================================== */
+/* common */
+/* =================================================== */
 img {
   max-width: 100%;
   height: auto;
@@ -211,6 +214,9 @@ h3 {
   opacity: 1;
 }
 
+/* =================================================== */
+/* header */
+/* =================================================== */
 header .header-wrapper {
   margin-inline: auto;
   max-width: 1500px;
@@ -284,7 +290,7 @@ header .header-wrapper #drawerMenu ul:has(a:hover) a:not(:hover) {
     width: 60px;
     height: 60px;
     display: block;
-    background: #FBF2F2;
+    background: #E7A5D1;
     border-radius: 1rem;
     z-index: 100;
   }
@@ -294,7 +300,7 @@ header .header-wrapper #drawerMenu ul:has(a:hover) a:not(:hover) {
     display: block;
     position: absolute;
     left: 20%;
-    background-color: #B6C7E1;
+    background-color: #FBF2F2;
     border-radius: 5px;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
@@ -315,7 +321,7 @@ header .header-wrapper #drawerMenu ul:has(a:hover) a:not(:hover) {
             transform: rotate(0);
   }
   header .header-wrapper .toggleButton.close {
-    background: #B6C7E1;
+    background: #E7A5D1;
   }
   header .header-wrapper .toggleButton.close span {
     background-color: #FBF2F2;
@@ -385,6 +391,9 @@ header .header-wrapper #drawerMenu ul:has(a:hover) a:not(:hover) {
   }
 }
 
+/* =================================================== */
+/* main */
+/* =================================================== */
 main .fv {
   margin-top: 2.5rem;
   margin-inline: auto;
@@ -801,6 +810,9 @@ main #access::after {
   bottom: -100px;
 }
 
+/* =================================================== */
+/* footer */
+/* =================================================== */
 footer .footer-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -840,6 +852,18 @@ footer .footer-container ul li a {
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
+footer .footer-container ul .nav-menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
+footer .footer-container ul .sns-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5rem;
+}
 footer .footer-container ul:has(a:hover) a:not(:hover) {
   opacity: 0.3;
 }
@@ -853,6 +877,9 @@ footer .footer-copy {
   margin-top: 8rem;
 }
 
+/* =================================================== */
+/* media */
+/* =================================================== */
 @media (width <= 600px) {
   main .coupon .banner {
     -webkit-box-orient: vertical;
@@ -948,6 +975,22 @@ footer .footer-copy {
     gap: 3rem;
   }
   footer .footer-container ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
+  }
+  footer .footer-container ul .nav-menu-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

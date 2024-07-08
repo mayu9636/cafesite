@@ -1,6 +1,10 @@
 @use "../global/mixins" as *;
 @use "../global/variables" as *;
 
+/* =================================================== */
+/* media */
+/* =================================================== */
+
 //////////////////////////////////////////////// スマホ
 @include mediaMax(sp) {
     main {
@@ -139,17 +143,23 @@
     /////////////////////////////////////////////////////// フッター
 
     footer {
+
         .footer-container {
             gap: 3rem;
 
             // ナビメニュー
             ul {
-                @include flexColumnCenter(1rem);
+                @include flexColumnCenter(3rem);
+
+                .nav-menu-list{
+                    @include flexColumnCenter(1rem);
+                }
             }
         }
 
         .footer-copy {
             margin-top: 5rem;
         }
-    }
-}
+
+    }//.footer-container
+}//footer
